@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/locales/en/faker.en.min.js" integrity="sha512-mxra1TXulw8G25XhwqZ8XGz69etSxlaa4HCcM+0ZVDbIfMakqnxliiSO9hnsq6hrXTFL9jwNBAUIyh//D2qCPw==" crossorigin="anonymous"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCYgwtx3sCHfDLZLwyfPDW2YUYUjqp9UGs",
+    authDomain: "fir-practice-eb9b4.firebaseapp.com",
+    databaseURL: "https://fir-practice-eb9b4.firebaseio.com",
+    projectId: "fir-practice-eb9b4",
+    storageBucket: "fir-practice-eb9b4.appspot.com",
+    messagingSenderId: "623516207414",
+    appId: "1:623516207414:web:ab55f48f841c772f474b97",
+    measurementId: "G-5BNKWWWHBY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="app.js" defer></script>
+</head>
+<body>
+    
+    <h1>My Awesome App</h1>
+
+    <section id="whenSignedOut">
+
+        <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+
+        <div id="userDetails"></div>
+
+        <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+
+    </section>
+
+    <section>
+
+        <ul id="thingsList">
+
+        </ul>
+
+        <button id="createThing">Create Random Thing</button>
+
+    </section>
+
+
+</body>
+</html>
